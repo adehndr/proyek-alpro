@@ -332,14 +332,16 @@ int pagehelp(struct peminjam_mobil peminjam[],struct car mobil[],int orang)
     printf("\n\nAnda dapat memilih salah satu dari pilihan 1 hingga 6\n");
     printf("program nomor 1 adalah program untuk menyewa mobil.\ntiap ada penyewa baru maka silahkan masukkan nama penyewa\ndan silahkan pilih mobil yang akan disewa jika anda ingin mengecek apakah mobil masih available\ndapat anda cek pada pilihan 'cek mobil'");
     printf("\n");
-    printf("");
-    printf("Silahkan pilih 1 untuk kembali ke menu dan pilih 2 untuk keluar dari program\n");
-    int menu = getInputInteger("Menu", 1, 100);
-    if(menu == 1)
-        pageMenu(peminjam,mobil,orang);
-    else if(menu == 2)
-		pageExit();
+    printf("Ketika anda memilih menu '1' maka anda akan diarahkan untuk memasukkan nama user\n|Silahkan masukkan nama anda : Adam (Contoh)|\nkemudian akan ditampilkan list mobil yang dapat disewa\nSelamat datang Adam,berikut daftar mobil yang bisa disewa\n\n|No.     Daftar Mobil :      Jumlah Unit :       Harga sewa perhari :|\n|1               Avanza               1    Rp.              5000     |\n|2               Kijang               1    Rp.             10000     |\n|3                Xenia               1    Rp.             15000     |\n|4                  APV               1    Rp.             20000     |");
+    printf("\nSilahkan pilih 1 untuk kembali ke menu dan pilih 2 untuk keluar dari program\n");
+	printf("setelah itu anda akan diarahkan untuk memilih mobil mana yang akan disewa\n|Silahkan pilih nomor dari mobil yang diinginkan : 3 (contoh)|\n\njika anda menekan nomor '2' maka akan muncul \n|No. Nama :       Mobil yang dipinjam :           Tagihan :|\n|1   Adam            Kijang                       30000    |\n");
+	printf("\nsilahkan pilih nomor 3 untuk cek ketersediaan unit mobil yang masil available untuk dipinjam.\n|No.     Daftar Mobil :      Jumlah Unit :       Harga sewa perhari :|\n|1               Avanza               1                   5000       |\n|2               Kijang               0                  10000       |\n|3                Xenia               1                  15000       |\n|4                  APV               1                  20000       |");
+	printf("\n\nsilahkan pilih nomor 4 untuk mengembalikan mobil. akan ditampilkan\n|waktu ke-1 = 286.80 detik                                                                     |\n|                                                                                              |\n|Berikut Merupakan daftar mobil yang dipinjam beserta peminjamnya.                             |\n|No.  Nama:       Mobil:      Durasi Peminjam :   Telah Dibayar:  Keterlambatan:  Denda:       |\n|1     Adam       Kijang          3 Hari          30000           9 Hari          9000 Rupiah  |\n");
+	printf("\nTekan Enter untuk kembali ke menu awal");
+	getchar();
+	getchar();
 }
+
 //FUNGSI UNTUK MENGHENTIKAN PROGRAM (EXIT)
 int pageExit(){
     printf("\n\nSayonara: Sampai Berjumpa Lagi");
